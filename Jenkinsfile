@@ -8,7 +8,7 @@ pipeline {
         SONAR_HOST_URL = 'http://sonarqube:9000'
         PATH = "/opt/sonar-scanner/bin:${env.PATH}"
         SONAR_TOKEN = credentials('sonar-token')
-        SONAR_PROJECT_KEY = 'BenchmarkJava'
+        SONAR_PROJECT_KEY = 'BenchmarkJava7'
     }
 
     stages {
