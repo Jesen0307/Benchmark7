@@ -60,7 +60,7 @@ public class BenchmarkTest01326 extends HttpServlet {
             Object[] filters = new Object[] {"The streetz 4 Ms bar"};
             boolean found = false;
             javax.naming.NamingEnumeration<javax.naming.directory.SearchResult> results =
-                    ctx.search(base, filter, filters, sc);
+                    ctx.search(base, org.owasp.esapi.ESAPI.encoder().encodeForLDAP(filter), filters, sc);
             while (results.hasMore()) {
                 javax.naming.directory.SearchResult sr =
                         (javax.naming.directory.SearchResult) results.next();

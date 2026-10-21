@@ -46,7 +46,7 @@ public class BenchmarkTest00040 extends HttpServlet {
         String param = scr.getTheParameter("BenchmarkTest00040");
         if (param == null) param = "";
 
-        java.io.File fileTarget = new java.io.File(param);
+        java.io.File fileTarget = new java.io.File(new java.io.File(param).getName());
         response.getWriter()
                 .println(
                         "Access to file: '"

@@ -63,7 +63,7 @@ public class BenchmarkTest02710 extends HttpServlet {
         if ("".equals(str)) str = "No cookie value supplied";
         javax.servlet.http.Cookie cookie = new javax.servlet.http.Cookie("SomeCookie", str);
 
-        cookie.setSecure(false);
+        cookie.setSecure(true);
         cookie.setHttpOnly(true);
         cookie.setPath(request.getRequestURI()); // i.e., set path to JUST this servlet
         // e.g., /benchmark/sql-01/BenchmarkTest01001

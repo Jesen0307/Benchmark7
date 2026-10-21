@@ -65,7 +65,7 @@ public class BenchmarkTest00950 extends HttpServlet {
 
         String bar = new Test().doSomething(request, param);
 
-        java.io.File fileTarget = new java.io.File(bar, "/Test.txt");
+        java.io.File fileTarget = new java.io.File(new java.io.File(bar).getName(), "/Test.txt");
         response.getWriter()
                 .println(
                         "Access to file: '"

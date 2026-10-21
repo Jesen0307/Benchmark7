@@ -50,7 +50,7 @@ public class BenchmarkTest00359 extends HttpServlet {
         if ((500 / 42) + num > 200) bar = param;
         else bar = "This should never happen";
 
-        java.io.File fileTarget = new java.io.File(bar);
+        java.io.File fileTarget = new java.io.File(new java.io.File(bar).getName());
         response.getWriter()
                 .println(
                         "Access to file: '"

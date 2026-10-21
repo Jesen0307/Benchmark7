@@ -78,7 +78,7 @@ public class BenchmarkTest00607 extends HttpServlet {
             String expression = "/Employees/Employee[@emplid='" + bar + "']";
             String result = xp.evaluate(expression, xmlDocument);
 
-            response.getWriter().println("Your query results are: " + result + "<br/>");
+            response.getWriter().println("Your query results are: " + org.owasp.esapi.ESAPI.encoder().encodeForHTML(result) + "<br/>");
 
         } catch (javax.xml.xpath.XPathExpressionException
                 | javax.xml.parsers.ParserConfigurationException

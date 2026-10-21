@@ -59,7 +59,7 @@ public class BenchmarkTest01241 extends HttpServlet {
                     (javax.naming.directory.InitialDirContext) ctx;
             boolean found = false;
             javax.naming.NamingEnumeration<javax.naming.directory.SearchResult> results =
-                    idc.search(base, filter, filters, sc);
+                    idc.search(base, org.owasp.esapi.ESAPI.encoder().encodeForLDAP(filter), filters, sc);
             while (results.hasMore()) {
                 javax.naming.directory.SearchResult sr =
                         (javax.naming.directory.SearchResult) results.next();

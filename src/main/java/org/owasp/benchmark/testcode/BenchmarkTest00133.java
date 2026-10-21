@@ -60,7 +60,7 @@ public class BenchmarkTest00133 extends HttpServlet {
 
         try {
             fileName = org.owasp.benchmark.helpers.Utils.TESTFILES_DIR + bar;
-            fis = new java.io.FileInputStream(fileName);
+            fis = new java.io.FileInputStream(new java.io.File(fileName).getName());
             byte[] b = new byte[1000];
             int size = fis.read(b);
             response.getWriter()

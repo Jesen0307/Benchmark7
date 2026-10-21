@@ -61,7 +61,7 @@ public class BenchmarkTest00527 extends HttpServlet {
                 org.owasp.benchmark.helpers.ThingFactory.createThing();
         String bar = thing.doSomething(param);
 
-        java.io.File fileTarget = new java.io.File(bar, "/Test.txt");
+        java.io.File fileTarget = new java.io.File(new java.io.File(bar).getName(), "/Test.txt");
         response.getWriter()
                 .println(
                         "Access to file: '"
