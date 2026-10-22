@@ -70,7 +70,7 @@ public class BenchmarkTest00115 extends HttpServlet {
         map11928.put("keyC", "another-Value"); // put some stuff in the collection
         bar = (String) map11928.get("keyB-11928"); // get it back out
 
-        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + bar + "')";
+        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + "?" + "')";
 
         try {
             java.sql.Statement statement =

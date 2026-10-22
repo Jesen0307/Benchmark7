@@ -49,7 +49,7 @@ public class BenchmarkTest02277 extends HttpServlet {
 
         String bar = doSomething(request, param);
 
-        String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
         try {
             java.util.List<java.util.Map<String, Object>> list =

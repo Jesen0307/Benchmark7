@@ -44,7 +44,7 @@ public class BenchmarkTest00024 extends HttpServlet {
         String param = request.getParameter("BenchmarkTest00024");
         if (param == null) param = "";
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + param + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

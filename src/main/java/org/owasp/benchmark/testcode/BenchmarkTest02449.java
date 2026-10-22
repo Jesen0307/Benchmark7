@@ -47,7 +47,7 @@ public class BenchmarkTest02449 extends HttpServlet {
 
         String bar = doSomething(request, param);
 
-        String sql = "{call " + bar + "}";
+        String sql = "{call " + "?" + "}";
 
         try {
             java.sql.Connection connection =

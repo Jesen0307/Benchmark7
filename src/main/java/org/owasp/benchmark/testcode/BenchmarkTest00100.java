@@ -70,7 +70,7 @@ public class BenchmarkTest00100 extends HttpServlet {
         map72344.put("keyC", "another-Value"); // put some stuff in the collection
         bar = (String) map72344.get("keyB-72344"); // get it back out
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

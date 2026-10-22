@@ -56,7 +56,7 @@ public class BenchmarkTest00511 extends HttpServlet {
         bar = (String) map94915.get("keyA-94915"); // get safe value back out
 
         try {
-            String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+            String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
             org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.batchUpdate(sql);
             response.getWriter()

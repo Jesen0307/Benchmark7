@@ -49,7 +49,7 @@ public class BenchmarkTest00765 extends HttpServlet {
                 org.owasp.benchmark.helpers.ThingFactory.createThing();
         String bar = thing.doSomething(param);
 
-        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
         try {
             // Long results =
             // org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.queryForLong(sql);

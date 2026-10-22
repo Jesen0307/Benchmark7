@@ -66,7 +66,7 @@ public class BenchmarkTest00604 extends HttpServlet {
                                             param.getBytes())));
         }
 
-        String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Statement statement =

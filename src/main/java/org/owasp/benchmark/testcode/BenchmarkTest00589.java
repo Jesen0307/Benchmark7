@@ -69,7 +69,7 @@ public class BenchmarkTest00589 extends HttpServlet {
             bar = valuesList.get(1); // get the last 'safe' value
         }
 
-        String sql = "{call " + bar + "}";
+        String sql = "{call " + "?" + "}";
 
         try {
             java.sql.Connection connection =

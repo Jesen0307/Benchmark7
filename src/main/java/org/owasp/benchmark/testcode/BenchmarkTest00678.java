@@ -52,7 +52,7 @@ public class BenchmarkTest00678 extends HttpServlet {
         if ((500 / 42) + num > 200) bar = param;
         else bar = "This should never happen";
 
-        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
         try {
             // Long results =
             // org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.queryForLong(sql);

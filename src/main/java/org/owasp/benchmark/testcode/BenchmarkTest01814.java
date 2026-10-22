@@ -46,7 +46,7 @@ public class BenchmarkTest01814 extends HttpServlet {
 
         String bar = new Test().doSomething(request, param);
 
-        String sql = "SELECT  * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT  * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
         try {
             org.springframework.jdbc.support.rowset.SqlRowSet results =
                     org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.queryForRowSet(sql);

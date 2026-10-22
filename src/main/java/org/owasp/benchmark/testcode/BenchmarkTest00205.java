@@ -60,7 +60,7 @@ public class BenchmarkTest00205 extends HttpServlet {
             bar = valuesList.get(1); // get the last 'safe' value
         }
 
-        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + bar + "')";
+        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + "?" + "')";
 
         try {
             java.sql.Statement statement =

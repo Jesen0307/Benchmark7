@@ -66,7 +66,7 @@ public class BenchmarkTest01007 extends HttpServlet {
         String bar = new Test().doSomething(request, param);
 
         String sql =
-                "SELECT TOP 1 userid from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+                "SELECT TOP 1 userid from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
         try {
             java.util.Map<String, Object> results =
                     org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.queryForMap(sql);

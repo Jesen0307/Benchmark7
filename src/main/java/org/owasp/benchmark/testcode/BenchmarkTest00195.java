@@ -56,7 +56,7 @@ public class BenchmarkTest00195 extends HttpServlet {
         bar = (7 * 42) - num > 200 ? "This should never happen" : param;
 
         try {
-            String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+            String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
             org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.execute(sql);
             response.getWriter()

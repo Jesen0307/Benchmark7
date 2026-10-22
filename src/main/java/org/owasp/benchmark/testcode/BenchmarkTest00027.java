@@ -44,7 +44,7 @@ public class BenchmarkTest00027 extends HttpServlet {
         String param = request.getParameter("BenchmarkTest00027");
         if (param == null) param = "";
 
-        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + param + "')";
+        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + "?" + "')";
 
         try {
             java.sql.Statement statement =

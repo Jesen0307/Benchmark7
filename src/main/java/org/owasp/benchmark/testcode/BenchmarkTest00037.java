@@ -58,7 +58,7 @@ public class BenchmarkTest00037 extends HttpServlet {
             }
         }
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + param + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

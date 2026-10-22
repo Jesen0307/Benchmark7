@@ -73,7 +73,7 @@ public class BenchmarkTest00334 extends HttpServlet {
         String g30608 = "barbarians_at_the_gate"; // This is static so this whole flow is 'safe'
         String bar = thing.doSomething(g30608); // reflection
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

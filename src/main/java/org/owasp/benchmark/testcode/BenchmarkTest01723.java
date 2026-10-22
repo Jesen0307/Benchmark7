@@ -69,7 +69,7 @@ public class BenchmarkTest01723 extends HttpServlet {
 
         String bar = new Test().doSomething(request, param);
 
-        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
         try {
             // int results =

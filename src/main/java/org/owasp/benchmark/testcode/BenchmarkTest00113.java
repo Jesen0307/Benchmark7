@@ -71,7 +71,7 @@ public class BenchmarkTest00113 extends HttpServlet {
         bar = (String) map21657.get("keyB-21657"); // get it back out
         bar = (String) map21657.get("keyA-21657"); // get safe value back out
 
-        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + bar + "')";
+        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + "?" + "')";
 
         try {
             java.sql.Statement statement =

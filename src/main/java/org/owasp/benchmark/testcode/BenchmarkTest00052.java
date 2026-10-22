@@ -45,7 +45,7 @@ public class BenchmarkTest00052 extends HttpServlet {
                 new org.owasp.benchmark.helpers.SeparateClassRequest(request);
         String param = scr.getTheValue("BenchmarkTest00052");
 
-        String sql = "{call " + param + "}";
+        String sql = "{call " + "?" + "}";
 
         try {
             java.sql.Connection connection =

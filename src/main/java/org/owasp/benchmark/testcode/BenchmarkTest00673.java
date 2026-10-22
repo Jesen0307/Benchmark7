@@ -52,7 +52,7 @@ public class BenchmarkTest00673 extends HttpServlet {
         if ((500 / 42) + num > 200) bar = param;
         else bar = "This should never happen";
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

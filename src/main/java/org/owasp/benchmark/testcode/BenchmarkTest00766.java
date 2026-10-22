@@ -52,7 +52,7 @@ public class BenchmarkTest00766 extends HttpServlet {
 
         bar = (7 * 18) + num > 200 ? "This_should_always_happen" : param;
 
-        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
         try {
             // Long results =
             // org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.queryForLong(sql);

@@ -69,7 +69,7 @@ public class BenchmarkTest00191 extends HttpServlet {
                 break;
         }
 
-        String sql = "{call " + bar + "}";
+        String sql = "{call " + "?" + "}";
 
         try {
             java.sql.Connection connection =

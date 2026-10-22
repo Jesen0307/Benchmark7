@@ -64,7 +64,7 @@ public class BenchmarkTest00601 extends HttpServlet {
 
         bar = (7 * 18) + num > 200 ? "This_should_always_happen" : param;
 
-        String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Statement statement =

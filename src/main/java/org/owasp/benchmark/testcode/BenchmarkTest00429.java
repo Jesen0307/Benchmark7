@@ -50,7 +50,7 @@ public class BenchmarkTest00429 extends HttpServlet {
 
         bar = (7 * 42) - num > 200 ? "This should never happen" : param;
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

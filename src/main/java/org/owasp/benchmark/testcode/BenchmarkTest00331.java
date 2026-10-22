@@ -58,7 +58,7 @@ public class BenchmarkTest00331 extends HttpServlet {
         bar = (String) map59781.get("keyB-59781"); // get it back out
         bar = (String) map59781.get("keyA-59781"); // get safe value back out
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =

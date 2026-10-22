@@ -47,7 +47,7 @@ public class BenchmarkTest01560 extends HttpServlet {
 
         String bar = new Test().doSomething(request, param);
 
-        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + bar + "')";
+        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + "?" + "')";
 
         try {
             java.sql.Statement statement =

@@ -57,7 +57,7 @@ public class BenchmarkTest00931 extends HttpServlet {
         }
 
         try {
-            String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + bar + "'";
+            String sql = "SELECT * from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
 
             org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.execute(sql);
             response.getWriter()

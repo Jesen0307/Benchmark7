@@ -71,7 +71,7 @@ public class BenchmarkTest00202 extends HttpServlet {
         String g15497 = "barbarians_at_the_gate"; // This is static so this whole flow is 'safe'
         String bar = thing.doSomething(g15497); // reflection
 
-        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + bar + "')";
+        String sql = "INSERT INTO users (username, password) VALUES ('foo','" + "?" + "')";
 
         try {
             java.sql.Statement statement =

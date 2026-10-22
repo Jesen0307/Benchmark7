@@ -44,7 +44,7 @@ public class BenchmarkTest00025 extends HttpServlet {
         String param = request.getParameter("BenchmarkTest00025");
         if (param == null) param = "";
 
-        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + param + "'";
+        String sql = "SELECT userid from USERS where USERNAME='foo' and PASSWORD='" + "?" + "'";
         try {
             // Long results =
             // org.owasp.benchmark.helpers.DatabaseHelper.JDBCtemplate.queryForLong(sql);

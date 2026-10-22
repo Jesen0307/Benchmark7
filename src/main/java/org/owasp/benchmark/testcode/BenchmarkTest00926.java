@@ -56,7 +56,7 @@ public class BenchmarkTest00926 extends HttpServlet {
             bar = valuesList.get(1); // get the last 'safe' value
         }
 
-        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + bar + "'";
+        String sql = "SELECT * from USERS where USERNAME=? and PASSWORD='" + "?" + "'";
 
         try {
             java.sql.Connection connection =
